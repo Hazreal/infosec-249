@@ -1,0 +1,20 @@
+
+<div class="wrapper clearfix wrapper_padding">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+    <p> I am a student at the <a href='#'>University of North Alabama</a></p>
+    <p> I spend my days learning various languages and trying out both front-end and back-end development</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2> Read my Thoughts </h2>
+    <hr>
+
+    <% @posts.each do |post| %>
+      <h3><a href='#'><%=link_to post.title, post %> </a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b, %d") %></p>
+    <% end %>
+
+  </div>
+
+</div>
