@@ -13,7 +13,9 @@
       <%= link_to "Adam Risher", root_path, class: "name" %>
       <nav>
         <%= link_to "Articles", posts_path %>
-    
+        <% if user_signed_in? %>
+          <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% end %>
       </nav>
     </header>
     <% if notice %>
